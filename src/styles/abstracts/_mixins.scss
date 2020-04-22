@@ -1,0 +1,67 @@
+@mixin setRightGutters($value) {
+  & > * {
+    margin-right: $value;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin setBottomGutters($value, $lastGutter: 0, $start: 1n, $iteration: 1) {
+  & > *:nth-child(#{$start} + #{$iteration}) {
+    margin-bottom: $value;
+
+    &:last-child {
+      margin-bottom: $lastGutter;
+    }
+  }
+}
+
+@mixin setTopGutters($value, $lastGutter: 0, $start: 1n, $iteration: 1) {
+  & > *:nth-child(#{$start} + #{$iteration}) {
+    margin-top: $value;
+
+    &:last-child {
+      margin-top: $lastGutter;
+    }
+  }
+}
+
+@mixin setLeftGutters($value) {
+  & > * {
+    margin-left: $value;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin setObjectFit($type) {
+  width: 100%;
+  height: 100%;
+  object-fit: $type;
+}
+
+@mixin setAbsoluteCenter($position: absolute) {
+  $size: 50%;
+  position: $position;
+  top: $size;
+  left: $size;
+  transform: translate(-$size, -$size);
+}
+
+@mixin setAbsoluteVerticalCenter() {
+  $size: 50%;
+  position: absolute;
+  top: $size;
+  transform: translateY(-$size);
+}
+
+@mixin setAbsoluteHorizontalCenter() {
+  $size: 50%;
+  position: absolute;
+  left: $size;
+  transform: translateX(-$size);
+}

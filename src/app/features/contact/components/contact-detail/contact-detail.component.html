@@ -1,0 +1,49 @@
+<form [formGroup]="form">
+  <div class="g-field">
+    <label>First name</label>
+    <input pKeyFilter="alpha"
+           maxlength="50"
+           pInputText type="text" formControlName="first_name" />
+  </div>
+
+  <div class="g-field">
+    <label>Last name</label>
+    <input pKeyFilter="alpha"
+           maxlength="50"
+           pInputText type="text" formControlName="last_name" />
+  </div>
+
+  <div class="g-field genders">
+    <label>Gender</label>
+    <div class="genders__options">
+      <ng-container *ngFor="let gender of genders; let i = index">
+        <p-radioButton name="group1"
+                       [value]="gender?.value"
+                       [label]="gender?.label"
+                       formControlName="gender"
+                       [inputId]="'option_' + i">
+        </p-radioButton>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="g-field">
+    <label>Email</label>
+    <input pInputText type="email"
+           maxlength="50"
+           formControlName="email" />
+  </div>
+
+  <div class="g-field">
+    <label>Phone</label>
+    <input pKeyFilter="pint"
+           maxlength="11"
+           pInputText
+           type="text"
+           formControlName="phone" />
+  </div>
+</form>
+
+<div class="actions">
+  <button (click)="submit()" pButton label="Save"></button>
+</div>

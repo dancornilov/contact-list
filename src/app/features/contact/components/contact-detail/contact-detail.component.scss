@@ -1,0 +1,15 @@
+@import 'abstracts';
+
+form {
+  @include setBottomGutters(20px);
+}
+
+.genders__options {
+  @include setRightGutters(10px);
+}
+
+.g-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

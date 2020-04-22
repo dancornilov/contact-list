@@ -1,0 +1,11 @@
+<aside>
+  <div class="d-flex justify-content-center">
+    <button [routerLink]="['/', AppRoutes.contact, AppRoutes.detail]" pButton label="New Contact"></button>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <p-listbox [options]="(contacts$ | listItem: ['first_name', 'last_name']:'created_at') | async"
+               (onChange)="showCard($event?.value)">
+    </p-listbox>
+  </div>
+</aside>

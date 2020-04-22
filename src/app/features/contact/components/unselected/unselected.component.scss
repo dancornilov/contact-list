@@ -1,0 +1,29 @@
+@import 'abstracts';
+
+.unselected {
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+
+  &__icon {
+    margin-bottom: 30px;
+
+    .accent-icon {
+      font-size: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 30px;
+  }
+}
