@@ -9,9 +9,17 @@ import { ContactLayoutComponent } from './layouts/contact-layout/contact-layout.
 import { UnselectedComponent } from './components/unselected/unselected.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule, CardModule, KeyFilterModule, ListboxModule, RadioButtonModule } from 'primeng/primeng';
+import {
+  ButtonModule,
+  CardModule,
+  InputTextareaModule,
+  KeyFilterModule,
+  ListboxModule,
+  RadioButtonModule
+} from 'primeng/primeng';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SharedModule } from '@shared/shared.module';
+import { TemplateRendererComponent } from './components/template-renderer/template-renderer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +27,8 @@ import { SharedModule } from '@shared/shared.module';
     ContactDetailComponent,
     ContactCardComponent,
     ContactLayoutComponent,
-    UnselectedComponent
+    UnselectedComponent,
+    TemplateRendererComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +41,7 @@ import { SharedModule } from '@shared/shared.module';
     ButtonModule,
     AngularFirestoreModule,
     CardModule,
+    InputTextareaModule,
     ListboxModule
   ]
 })

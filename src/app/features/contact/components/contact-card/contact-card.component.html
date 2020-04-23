@@ -1,10 +1,10 @@
-<div class="d-flex justify-content-center" *ngIf="contact$ | async as contact">
+<div class="contact-wrapper d-flex justify-content-center" *ngIf="contact$ | async as contact">
   <div class="wrapper">
-    <h1>{{ contact | fullName }}</h1>
+    <div [innerHTML]="templateDoc?.template | interpolation: {contact: contact}">
+    </div>
 
-    <div class="email">
-      <span>Email:</span>
-      <a href="mailto:{{ contact?.email }}"> {{ contact?.email }}</a>
+    <div class="actions">
+      <button [routerLink]="['/', AppRoutes.contact, AppRoutes.renderer]" pButton label="Edit template"></button>
     </div>
   </div>
 </div>

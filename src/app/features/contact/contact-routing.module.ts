@@ -4,6 +4,7 @@ import { ContactLayoutComponent } from './layouts/contact-layout/contact-layout.
 import { UnselectedComponent } from './components/unselected/unselected.component';
 import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { TemplateRendererComponent } from './components/template-renderer/template-renderer.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: 'detail',
         component: ContactDetailComponent
+      },
+      {
+        path: 'renderer',
+        component: TemplateRendererComponent
       },
       {
         path: 'detail/:id',

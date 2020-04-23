@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { ListItemPipe } from './pipes/list-item.pipe';
 import { FullNamePipe } from './pipes/full-name.pipe';
+import { InterpolationPipe } from './pipes/interpolation.pipe';
 
 @NgModule({
   declarations: [
     ListItemPipe,
-    FullNamePipe
+    FullNamePipe,
+    InterpolationPipe
   ],
   exports: [
     ListItemPipe,
-    FullNamePipe
+    FullNamePipe,
+    InterpolationPipe
   ],
   imports: [
     CommonModule
